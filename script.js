@@ -1,8 +1,11 @@
 const etchASketch = document.querySelector("#etch-a-sketch");
 
 CreateNewGrid(16);
+CreateNewGrid(32);
 
 function CreateNewGrid(gridSizeRequested) {
+
+    etchASketch.innerHTML = "";
 
     let gridSize;
 
