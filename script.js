@@ -2,6 +2,14 @@
 const etchASketch = document.querySelector("#etch-a-sketch");
 CreateNewGrid(16);
 
+// Set up user control of new grid creation
+const newGridButton = document.querySelector("#set-grid-size");
+newGridButton.addEventListener('click', function() {
+    const newGridSize = Number.parseInt(prompt("Enter new grid size:", 16));
+
+    CreateNewGrid(newGridSize);
+});
+
 /* 
 Function which creates an n*n grid of divs - first n columns are created, then n rows are added 
 to each collumn. The grid can be drawn on by dragging the mouse over the screen.

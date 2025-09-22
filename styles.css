@@ -3,6 +3,16 @@
     margin: none;
 }
 
+#page-content {
+    display: flex;
+    flex-direction: column;
+}
+
+#set-grid-size {
+    margin: 1vh;
+    align-self: center;
+}
+
 #etch-a-sketch {
     width: 96vh;
     height: 96vh;
