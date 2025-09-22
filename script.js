@@ -6,6 +6,8 @@ function CreateNewGrid(gridSizeRequested) {
 
     let gridSize;
 
+    if (!Number.isInteger(gridSizeRequested)) { alert("Error, value must be integer"); return; }
+
     if (gridSizeRequested > 100) { gridSize = 100; } 
     else if (gridSizeRequested < 1) { gridSize = 1; }
     else { gridSize = gridSizeRequested; }
