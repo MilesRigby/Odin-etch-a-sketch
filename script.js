@@ -48,9 +48,13 @@ function CreateNewGrid(gridSizeRequested) {
 
             // Change color on mouseover, allowing the user to draw
             newY.addEventListener('mouseover', function() { 
+                // Increase opacity of colour
                 let oldOpacity = getComputedStyle(newY).getPropertyValue('opacity');
                 let opacity = parseFloat(oldOpacity) + 0.1;
                 newY.style.opacity = `${opacity}`;
+
+                // Randomly apply new color
+                newY.style.background = `rgb(${Math.floor(Math.random()*256)}, ${Math.floor(Math.random()*256)}, ${Math.floor(Math.random()*256)})`;
             })
 
             newX.appendChild(newY);
