@@ -1,0 +1,30 @@
+* {
+    padding: none;
+    margin: none;
+}
+
+#etch-a-sketch {
+    width: 96vh;
+    height: 96vh;
+    display: flex;
+    flex-direction: row;
+    flex: none;
+    justify-content: space-between;
+}
+
+.etch-a-sketch-x-item {
+    width: 6vh;
+    height: 96vh;
+    display: flex;
+    flex-direction: column;
+    flex: 1 1 auto;
+}
+
+.etch-a-sketch-y-item {
+    width: 6vh;
+    height: 6vh;
+    flex: 1 1 auto;
+    border-style: solid;
+    border-color: black;
+    border-width: 1px;
+}
