@@ -8,9 +8,14 @@
     flex-direction: column;
 }
 
-#set-grid-size {
-    margin: 1vh;
+#buttons-menu {
     align-self: center;
+    display: flex;
+    flex-direction: row;
+}
+
+button {
+    margin: 1vh;
 }
 
 #etch-a-sketch {
