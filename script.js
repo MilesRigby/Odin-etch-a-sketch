@@ -1,18 +1,32 @@
 const etchASketch = document.querySelector("#etch-a-sketch");
 
-for (i=0; i<16; i++) {
+CreateNewGrid(16);
 
-    let newX = document.createElement("div");
-    newX.classList = "etch-a-sketch-x-item";
+function CreateNewGrid(gridSizeRequested) {
 
-    etchASketch.appendChild(newX);
+    let gridSize;
 
-    for (j=0; j<16; j++) {
+    if (gridSizeRequested > 100) { gridSize = 100; } 
+    else if (gridSizeRequested < 1) { gridSize = 1; }
+    else { gridSize = gridSizeRequested; }
+
+    for (i=0; i<gridSize; i++) {
+
+        let newX = document.createElement("div");
+        newX.classList = "etch-a-sketch-x-item";
+
+        etchASketch.appendChild(newX);
+
+        for (j=0; j<gridSize; j++) {
         
-        let newY = document.createElement("div");
-        newY.classList = "etch-a-sketch-y-item";
+            let newY = document.createElement("div");
+            newY.classList = "etch-a-sketch-y-item";
 
-        newX.appendChild(newY);
+            newY.addEventListener('mouseover', () => newY.style = "background: grey")
 
+            newX.appendChild(newY);
+
+        }
     }
+
 }
