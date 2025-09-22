@@ -30,4 +30,6 @@
 
 .etch-a-sketch-y-item {
     flex: 1 1 auto;
+    background: black;
+    opacity: 0;
 }

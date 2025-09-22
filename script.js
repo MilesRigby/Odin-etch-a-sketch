@@ -47,7 +47,11 @@ function CreateNewGrid(gridSizeRequested) {
             newY.classList = "etch-a-sketch-y-item";
 
             // Change color on mouseover, allowing the user to draw
-            newY.addEventListener('mouseover', () => newY.style = "background: grey")
+            newY.addEventListener('mouseover', function() { 
+                let oldOpacity = getComputedStyle(newY).getPropertyValue('opacity');
+                let opacity = parseFloat(oldOpacity) + 0.1;
+                newY.style.opacity = `${opacity}`;
+            })
 
             newX.appendChild(newY);
 
